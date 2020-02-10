@@ -1,0 +1,121 @@
+html, body { font-size: 12px; margin: 0; overflow: hidden;}
+
+/* 헤더 css */
+#header {
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  top: -100px;
+  border-bottom: solid 0px white;
+  text-align: center;
+  transition: all 0.5s cubic-bezier(0.75, 0.3, 0.75, 0.3) 1s;
+}
+#header.small {
+  transition: border 0.2s;
+  border-bottom: solid 1.5px #ededed;
+}
+#header ul { list-style: none; padding: 0; }
+.visible-view {
+  background-color: white;
+  opacity: 0;
+  transition: all 0.75s ease 1.5s;
+}
+.header-logo { vertical-align: middle; padding: 0 60px; }
+.category { display: inline; }
+.cate-list {
+  display: inline-block;
+  font-size: 2em;
+  line-height: 60px;
+  padding: 20px 40px;
+}
+.cate-list:hover {
+  color: #000088;
+  cursor: pointer;
+  background-color: #EDEDED;
+}
+.sub-hover {
+  font-size: 0.6em;
+  line-height: 30px;
+  padding: 10px;
+}
+.cate-list:hover .sub-category {
+  transform: translateY(100px);
+  opacity: 1;
+  color: black;
+}
+.sub-category {
+  background-color: #EDEDED;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  transition: all 0.5s;
+}
+
+/* 좌우 네비게이션 바 */
+nav { 
+  position: fixed;
+  top: 0; 
+  width: 100px;
+  height: 100vh;
+  background-color: white;
+  /* background-color: transparent; */
+  transition: all 0.5s cubic-bezier(0.75, 0.3, 0.75, 0.3) 1s;
+}
+#left-navi { left: -100px; border-right: solid 1px #ededed; }
+#right-navi { right: -100px; border-left: solid 1px #ededed;}
+.pos-navi { 
+  position: fixed;
+  width: 100px;
+  top: 38%;
+  right: 0;
+  list-style: none; 
+  padding: 0;
+  text-align: center; 
+}
+.pos-point {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 25px auto;
+  border: 2px solid #000;
+}
+.selected { background-color:#000; }
+
+
+/* 콘텐트의 공통적인 크기 */
+.content-box {
+  position: relative;
+  height: 100vh;
+  text-align: center;
+}
+.title {
+  padding-top: 10%;
+  font-weight: bold;
+  font-size: 5em;
+}
+
+/* 배너 css */
+#banner {
+  font-size: 7em;
+  font-weight: bold;
+  background-image: url('../images/banner.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+}
+.banner-info {
+  position: relative;
+  top: 45%;
+}
+.banner-text {
+  margin: auto;
+  text-shadow: 7px 7px 7px rgba(0, 0, 0, 0.2);
+  width: 600px;
+}
+
+/* 회사소개 css */
+
+#intro-company pre { text-align: left; }

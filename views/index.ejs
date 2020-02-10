@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+  </head>
+  <body>
+    <section id='container'>
+      <article class='content-box' id='banner'>
+        <div class='banner-info'>
+          <p class='banner-text'>
+            Innovation<br>
+            for a Better Life
+          </p>
+        </div>
+      </article>
+      <article class='content-box' id='intro-company'>
+        <div class='title'>회사소개</div>
+        
+      </article>
+      <article class='content-box' id='intro-product'>
+        <div class='title'>제품소개</div>
+      </article>
+      <article class='content-box' id='state-company'>
+        <div class='title'>회사현황</div>
+      </article>
+      <nav id='left-navi'></nav>
+      <nav id='right-navi'>
+        <ul class='pos-navi'>
+          <a href='javascript:void(0);' onclick='moveIndex(0);'>
+              <li class='pos-point selected'></li>
+            </a>
+          <% for (var i = 1; i < content.length; i++) { %>
+            <a href='javascript:void(0);' onclick='moveIndex(<%=i%>);'>
+              <li class='pos-point'></li>
+            </a>
+          <% } %>
+        </ul>
+      </nav>
+    </section>
+    <header id='header'>
+      <div class='visible-view'>
+        <img class='header-logo' src='/images/logo.svg'>
+        <ul class='category'>
+          <% for(var i = 0; i < cate_list.length; i++) { %>
+            <li class='cate-list'>
+            <%=cate_list[i]%>
+            <ul class='sub-category'>
+              <% for(var j = 0; j < cate_list.length; j++) { %>
+                <li class='sub-hover cate-list'><%=cate_list[j]%></li>
+              <% } %>
+            </ul>
+            </li>
+          <% } %>
+        </ul>
+      </div>
+    </header>
+  </body>
+  <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="/javascripts/load.js"></script>  
+  <script src="/javascripts/scroll.js"></script>  
+</html>
